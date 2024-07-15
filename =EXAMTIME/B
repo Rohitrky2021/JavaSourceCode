@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Main{
+
+    static int[][] vpr = new int[901][2];
+
+    static void precomputeFibonacci() {
+        int[] prevPrev = {1, 0};
+        int[] prev = {0, 1};
+        vpr[1] = prevPrev;
+        vpr[2] = prev;
+        for (int i = 3; i < 901; i++) {
+            prevPrev = vpr[i - 2];
+            prev = vpr[i - 1];
+            int[] newOne = new int[2];
+            newOne[0] = prevPrev[0] + prev[0];
+            newOne[1] = prevPrev[1] + prev[1];
+            vpr[i] = newOne;
+            prevPrev = prev;
+            prev = newOne;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt(); // Number of test cases
+
+        precomputeFibonacci();
+
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int k = scanner.nextInt();
+
+            if (k >= 901) {
+                System.out.println(0);
+                continue;
+            }
+
+            int[] val = vpr[k];
+            int result = 0;
+            for (int i = 0; i <= n; i++) {
+                int temp = (n - val[0] * i);
+                if (temp % val[1] == 0) {
+                    if (temp / val[1] >= i) {
+                        result++;
+                    }
+                }
+            }
+
+            System.out.println(result);
+        }
+    }
+}

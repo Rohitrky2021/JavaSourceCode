@@ -1,0 +1,7 @@
+/**
+ * B
+ */
+public class B {
+
+  
+}

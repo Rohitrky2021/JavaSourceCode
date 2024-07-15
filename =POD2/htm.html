@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Overflow</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+        }
+        .reveal-button {
+            position: absolute;
+            left: 719.053px; /* Initial position */
+            top: 26.8777px; /* Initial position */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a id="revealButton" class="reveal-button" href="https://youtu.be/d0w4w9WgXc0">Reveal</a>
+    </div>
+    <script>
+        // Get window dimensions
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        // Get the button element
+        const button = document.getElementById("revealButton");
+
+        // Function to generate random position for the button
+        function randomPosition() {
+            const x = Math.random() * (windowWidth - 100); // Adjust 100 for button width
+            const y = Math.random() * (windowHeight - 40); // Adjust 48 for button height
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+
+        // Initial random position
+        randomPosition();
+
+        // Update button position every 0.5 seconds
+        setInterval(randomPosition, 500);
+    </script>
+</body>
+</html>

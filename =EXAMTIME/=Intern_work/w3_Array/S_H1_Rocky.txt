@@ -1,0 +1,55 @@
+## Rocky defeats Monster
+
+A boy named Rocky is on an adventurous quest in a game where he faces \(n\) hordes of monsters. Each horde \(i\) contains \(a_i\) monsters. Rocky's goal is to destroy all the monsters using two types of attacks and a combo counter \(x\), which starts at 0.
+
+Here’s how Rocky can attack the monsters:
+
+- **Single Attack:** Choose a horde \(i\) (1 ≤ \(i\) ≤ \(n\)) with at least one monster left. Kill one monster from horde \(i\), and increase the combo counter \(x\) by 1.
+- **Ultimate Attack:** Choose a horde \(i\) (1 ≤ \(i\) ≤ \(n\)) with at least \(x\) monsters left. Use an ultimate attack to kill \(x\) monsters from horde \(i\), and then reset \(x\) to zero.
+
+Rocky wants to defeat all the monsters in the minimum number of attacks. Can you help Rocky determine the minimum number of attacks required for each game scenario?
+
+### Input
+The first line contains a single integer \(t\) (1 ≤ \(t\) ≤ 10^4) — the number of test cases.  
+The first line of each test case contains a single integer \(n\) (1 ≤ \(n\) ≤ 2 \times 10^5) — the number of hordes of monsters.  
+The second line contains \(n\) integers \(a_1, a_2, \ldots, a_n\) (1 ≤ \(a_i\) ≤ 10^9) — the number of monsters in each horde.  
+The sum of \(n\) across all test cases does not exceed \(2 \times 10^5\).
+
+### Output
+For each test case, output the minimum number of attacks required to kill all the monsters.
+
+### Examples
+
+#Constrains
+\(1 \leq t \leq 10^4, 1 \leq n \leq 2 \times 10^5, 1 \leq a_i \leq 10^9\)
+
+The sum of \(n\) across all test cases does not exceed \(2 \times 10^5\).
+
+**Input:**
+4
+4
+1 3 1 1
+4
+1 2 1 1
+6
+3 2 1 5 2 4
+2
+1 6
+
+
+**Output:**
+4
+4
+11
+5
+
+
+
+### Explanation
+
+- In the first test case, Rocky can use single attacks on the 1st, 3rd, and 4th hordes, followed by an ultimate attack on the 2nd horde, requiring a total of 4 attacks.
+- In the second test case, Rocky can use single attacks on the 1st and 3rd hordes, followed by an ultimate attack on the 2nd horde, and another single attack on the 4th horde, requiring a total of 4 attacks.
+- In the third test case, Rocky can use a combination of single and ultimate attacks to defeat all the monsters, requiring a total of 11 attacks.
+- In the fourth test case, Rocky can use a combination of single and ultimate attacks on the 1st and 2nd hordes, requiring a total of 5 attacks.
+
+Help Rocky determine the best strategy to win the game with the least number of attacks!

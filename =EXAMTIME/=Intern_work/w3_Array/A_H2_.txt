@@ -1,0 +1,74 @@
+## beautiful  operations
+
+Ella loves arrays and wants to make them beautiful with the least amount of operations possible. An array is considered beautiful if after shuffling its elements, you can perform a series of operations such that each element \( a_i \) satisfies \( a_i = a_{n-i+1} \) for all \( 1 \leq i \leq n \).
+
+To achieve this, Ella can perform the following operations:
+
+1. Shuffle the array elements as she likes.
+2. Perform an operation on any element \( a_i \) to make \( a_i = a_i + k \).
+
+Given multiple test cases, help Ella determine the minimum number of operations required to make each array beautiful or determine if it's impossible.
+
+### Input
+The first line contains an integer \( t \) (1 ≤ \( t \) ≤ \( 10^4 \)) — the number of test cases.  
+Each test case begins with two integers \( n \) and \( k \) (1 ≤ \( n \) ≤ \( 10^5 \), 1 ≤ \( k \) ≤ \( 10^9 \)) — the size of the array and the integer \( k \).  
+The next line contains \( n \) integers \( a_1, a_2, ..., a_n \) (1 ≤ \( a_i \) ≤ \( 10^9 \)) — the elements of the array \( a \).  
+It is guaranteed that the sum of \( n \) across all test cases does not exceed \( 2 \times 10^5 \).
+
+### Output
+For each test case:
+
+- Print the minimum number of operations needed to make the array beautiful.
+- Print \(-1\) if it is impossible to make the array beautiful.
+
+### Examples
+
+**Input:**
+11
+1 1000000000
+1
+2 1
+624323799 708290323
+3 1
+3 2 1
+4 1
+7 1 5 3
+5 1
+11 2 15 7 10
+7 1
+1 8 2 16 8 16 31
+13 1
+2 1 1 3 3 11 12 22 45 777 777 1500 74
+10 2
+1 2 1 2 1 2 1 2 1 2
+11 2
+1 2 1 2 1 2 1 2 1 2 1
+13 3
+2 3 9 14 17 10 22 20 18 30 1 4 28
+5 1
+2 3 5 3 5
+
+
+**Output:**
+
+0
+83966524
+1
+4
+6
+1
+48
+-1
+0
+14
+0
+
+
+### Explanation
+
+- In the first test case, the array is already beautiful.
+- In the second test case, shuffle the array and perform 83966524 operations on the first element to make it beautiful.
+- In the third test case, shuffle the array and perform one operation on the third element to make it beautiful.
+- In the eighth test case, it's impossible to make the array beautiful.
+
+Help Ella determine the minimum operations required to make each array beautiful efficiently!

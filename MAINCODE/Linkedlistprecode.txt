@@ -1,0 +1,16 @@
+Linkedlistprecode
+addlast
+printll
+addmiddle
+deletefirst
+deltill
+findkey
+recursearch
+reverse
+del teh Nth node from last
+public void Nthdel
+mid
+palindrom
+longestPalindrome
+merge --> merge sort 2 linked list ---> Node mergesort(Node head)
+zigzag-->(1st->last->2nd->last-1-->3rd)

@@ -1,0 +1,90 @@
+<div class="_16yfq _39fEV"><h2 id="solution">Solution</h2>
+    <p>The problem statement clearly mentions that we are not to use any additional space for our solution. So naturally, a recursive solution is not acceptable here because of the space utilized by the recursion stack. However, for the sake of completeness, we shall go over the recursive approach first before moving on to the iterative approach. The interviewer may not specify the space constraint initially and so, a recursive solution would be a quick first approach followed by the iterative version.</p>
+    <p>A Linked list is a recursive structure. A sub-list in itself is a linked list. So, if you think about it, reversing a list consisting of k nodes is simply a linked list reversal algorithm. So, before we look at our actual approaches, we need to know that we will essentially be making use of a linked list reversal function here. There are many ways of reversing a linked list. A lot of programmers like to reverse the links themselves for reversing a linked list. What I personally like to do is to combine linked list traversal with insertion in beginning.</p>
+    <ul>
+    <li>Say the linked list we need to reverse has the starting node called <code>head</code>.</li>
+    <li>Now, we will consider another pointer which will act as the head of the reversed linked list. Let's call this <code>rev_head</code>.</li>
+    <li>We will use a pointer, <code>ptr</code> to traverse the original list.</li>
+    <li>For every element, we basically insert it at the beginning of the reverse list which has <code>rev_head</code> as its head.</li>
+    <li>That's it! We keep on moving <code>ptr</code> one step forward and keep inserting the nodes in the beginning of our reverse list and we will end up reversing the entire list.</li>
+    </ul>
+    <img src="../Figures/25/img1.png" alt="">
+    <img src="../Figures/25/img2.png" alt="">
+    <p>Now that we have the basic linked list reversal stuff out of the way, we can move on with our actual problem which is to reverse the linked list, <code>k</code> nodes at a time. The basic idea is to make use of our reversal function for a linked list. Usually, we start with the head of the list and keep running the reversal algorithm all the way to the end. However, in this case, we will only process <code>k nodes</code>.</p>
+    <p>However, the problem statement also mentions that if there are <code>&lt; k nodes</code> left in the linked list, then we don't have to reverse them. This implies that we first need to <code>count k nodes</code> before we get on with our reversal. If at any point, we find that we don't have <code>k nodes</code>, then we don't reverse that portion of the linked list. Right off the bat, this implies at least two traversals of the list overall. One for counting, and the next, for reversals.</p>
+    <h4 id="approach-1-recursion">Approach 1: Recursion</h4>
+    <p><strong>Intuition</strong></p>
+    <p>The recursive approach is a natural fit for this problem since the problem asks us to perform a modification operation on a fixed portion of the linked list, one portion at a time. Since a sub-list of a linked list is a linked list in itself, we can make use of recursion to do the heavy lifting for us. All we need to focus here is how we are going to reverse those k nodes. This part is sorted because we already discussed how general linked list reversal works.</p>
+    <p>We also need to make sure we are hooking up the right connections as recursion backtracks. For e.g. say we are given a linked list <code>1,2,3,4,5</code> and we are to reverse two nodes at a time. In the recursive approach, we will first reverse the first two nodes thus getting <code>2,1</code>. When recursion backtracks, we assume that we will have <code>4,3,5</code>. Now, we need to ensure that we hookup <code>1-&gt;4</code> correctly so that the overall list is what we expect.</p>
+    <p><strong>Algorithm</strong></p>
+    <ol>
+    <li>Assuming we have a <code>reverse()</code> function already defined for a linked list. This function would take the head of the linked list and also an integer value representing <code>k</code>. We don't have to reverse till the end of the linked list. Only <code>k</code> nodes are to be touched at a time.</li>
+    <li>In every recursive call, we first count the number of nodes in the linked list. As soon as the count reaches <code>k</code>, we break.</li>
+    <li>If there are less than <code>k</code> nodes left in the list, we return the head of the list.</li>
+    <li>However, if there are at least <code>k</code> nodes in the list, then we reverse these nodes by calling our <code>reverse()</code> function defined in the first step.</li>
+    <li>Our recursion function needs to return the head of the reversed linked list. This would simply be the <span class="math math-inline"><span class="katex"><span class="katex-mathml">kthk^th</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.7936em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.7936em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span></span></span></span></span> nodes in the list passed to the recursion function because after reversing the first <code>k</code> nodes, the <span class="math math-inline"><span class="katex"><span class="katex-mathml">kthk^th</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.7936em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.7936em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span><span class="mord mathnormal">h</span></span></span></span></span> node will become the new head and so on.</li>
+    <li>So, in every recursive call, we first reverse <code>k</code> nodes, then recurse on the rest of the linked list. When recursion returns, we establish the proper connections.</li>
+    </ol>
+    <p>Let's look at a quick example of the algorithm's dry run. So, in the first recursive step, we process the first two nodes of the list and then make a recursive call.</p>
+    
+    <img src="../Figures/25/img3.png" alt="">
+    
+    <p>Here again, we process the two nodes and then make the final recursive call for this example linked list.</p>
+    
+    <img src="../Figures/25/img4.png" alt="">
+    
+    <p>Now here we don't have enough nodes to reverse. So, in the recursive call we simply return the only remaining node here which is "5". Once that node is returned from the recursive call, we need to establish the proper connections i.e. from 3-&gt;5.</p>
+    
+    <img src="../Figures/25/img5.png" alt="">
+    
+    <p>Similarly, recursion would return <code>4</code> as the new head node of the modified list ahead. We need to establish the connection from <code>1</code> to <code>4</code> and then return <code>2</code> as the head of the modified list.</p>
+    
+    <img src="../Figures/25/img6.png" alt="">
+    
+    <iframe src="https://leetcode.com/playground/BVF9o8xV/shared" width="100%" height="500" name="user-content-BVF9o8xV" allowfullscreen="" translate="no"></iframe>
+    <p><strong>Complexity Analysis</strong></p>
+    <ul>
+    <li>Time Complexity: <span class="math math-inline"><span class="katex"><span class="katex-mathml">O(N)O(N)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.10903em;">N</span><span class="mclose">)</span></span></span></span></span> since we process each node exactly twice. Once when we are counting the number of nodes in each recursive call, and then once when we are actually reversing the sub-list. A slightly optimized implementation here could be that we don't count the number of nodes at all and simply reverse k nodes. If at any point we find that we didn't have enough nodes, we can re-reverse the last set of nodes so as to keep the original structure as required by the problem statement. That ways, we can get rid of the extra counting.</li>
+    <li>Space Complexity: <span class="math math-inline"><span class="katex"><span class="katex-mathml">O(N/k)O(N/k)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.10903em;">N</span><span class="mord">/</span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="mclose">)</span></span></span></span></span> used up by the recursion stack. The number of recursion calls is determined by both <span class="math math-inline"><span class="katex"><span class="katex-mathml">kk</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-mathml">NN</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.10903em;">N</span></span></span></span></span>. In every recursive call, we process <span class="math math-inline"><span class="katex"><span class="katex-mathml">kk</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span> nodes and then make a recursive call to process the rest.
+    <br>
+    </li>
+    </ul>
+    <br>
+    <hr>
+    <h4 id="approach-2-iterative-o1-space">Approach 2: Iterative O(1) space</h4>
+    <p><strong>Intuition</strong></p>
+    <p>The idea here is the same as before except that we won't be making use of the stack here and rather use a couple additional variables to maintain the proper connections along the way. We still count <code>k</code> nodes at a time. If we find <code>k</code> nodes, then we reverse them.</p>
+    <blockquote>
+    <p>In addition to the "head" and "rev_head" variables from before, we need to know the "tail" node of the previous set of k nodes as well. The recursive approach reverses k nodes from left to right, but it establishes the connections from right to left or back to front. In this approach we will be reversing and establishing the connections while going from front to back.</p>
+    </blockquote>
+    <p><strong>Algorithm</strong></p>
+    <ol>
+    <li>Assuming we have a <code>reverse()</code> function already defined for a linked list. This function would take the head of the linked list and also an integer value representing <code>k</code>. We don't have to reverse till the end of the linked list. Only <code>k</code> nodes are to be touched at a time.</li>
+    <li>We need to maintain four different variables in this algorithm as we chug along:
+    <ol>
+    <li><em>head</em> ~ which will always point to the original head of the next set of <code>k</code> nodes.</li>
+    <li><em>revHead</em> ~ which is basically the tail node of the original set of <code>k</code> nodes. Hence, this becomes the new head after reversal.</li>
+    <li><em>ktail</em> ~ is the tail node of the previous set of <code>k</code> nodes after reversal.</li>
+    <li><em>newHead</em> ~ acts as the head of the final list that we need to return as the output. Basically, this is the <span class="math math-inline"><span class="katex"><span class="katex-mathml">kthk^{th}</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.8491em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8491em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">h</span></span></span></span></span></span></span></span></span></span></span></span></span> node from the beginning of the original list.</li>
+    </ol>
+    </li>
+    <li>The core algorithm remains the same as before. Given the <code>head</code>, we first count <code>k</code> nodes. If we are able to find at least <code>k</code> nodes, we reverse them and get our <code>revHead</code>.</li>
+    <li>At this point we check if we already have the variable <code>ktail</code> set or not. It won't be set when we reverse the very first set of <code>k</code> nodes. However, if this variable is set, then we attach <code>ktail.next</code> to the <code>revHead</code>. Also, we need to update <code>ktail</code> to point to the tail of the reversed set of <code>k</code> nodes that we just processed. Remember, the <code>head</code> node becomes the new tail and hence, we set <code>ktail = head</code>.</li>
+    <li>We keep doing this until we reach the end of the list or we encounter that there are <code>&lt; k</code> nodes left in the list.</li>
+    </ol>
+    <p>Let's look at the same linked list that we use for a dry run in the first approach. The first step simply assigns all the relevant pointers and reverses the first two nodes.</p>
+    
+    <img src="../Figures/25/img7.png" alt="">
+    
+    <p>This step is really important since it highlights the use case of the <code>ktail</code> pointer here.</p>
+    
+    <img src="../Figures/25/img8.png" alt="">
+    
+    <iframe src="https://leetcode.com/playground/wE5Strdn/shared" width="100%" height="500" name="user-content-wE5Strdn" allowfullscreen="" translate="no"></iframe>
+    <ul>
+    <li>Time Complexity: <span class="math math-inline"><span class="katex"><span class="katex-mathml">O(N)O(N)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.10903em;">N</span><span class="mclose">)</span></span></span></span></span> since we process each node exactly twice. Once when we are counting the number of nodes in each recursive call, and then once when we are actually reversing the sub-list.</li>
+    <li>Space Complexity: <span class="math math-inline"><span class="katex"><span class="katex-mathml">O(1)O(1)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span>.
+    <br>
+    </li>
+    </ul>
+    <br></div>

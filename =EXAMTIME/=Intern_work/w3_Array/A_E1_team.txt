@@ -1,0 +1,55 @@
+## Team Participation 
+
+One day, three best friends Petya, Vasya, and Tonya decided to form a team and participate in programming contests. 
+Participants are usually presented with several problems during these contests.
+ The friends made a pact: they will solve a problem if at least two of them are confident about the solution. 
+ If fewer than two friends are confident, they will skip that problem.
+
+In an upcoming contest, there are \( n \) problems. For each problem, we know which friend is confident about the solution. Your task is to help the friends determine the number of problems they will solve based on their confidence levels.
+
+### Input
+The first line of input contains a single integer \( n \) (1 ≤ \( n \) ≤ 1000) — the number of pcontestroblems in the .
+The next \( n \) lines each contain three integers at each index of an array , either 0 or 1. The first number indicates whether Petya is confident about the
+problem's solution, the second number indicates Vasya's confidence, and the third number indicates Tonya's confidence.
+ The numbers in the lines are separated by spaces.
+
+### Output
+Print a single integer — the number of problems the friends will solve during the contest.
+
+### Examples
+
+
+** Constraints ** 
+ \( n \) (1 ≤ \( n \) ≤ 1000)
+
+**Input:**
+
+3
+1 1 0
+1 1 1
+1 0 0
+
+
+**Output:**
+
+2
+
+
+**Input:**
+
+2
+1 0 0
+0 1 1
+
+
+**Output:**
+
+1
+
+
+### Note
+In the first example, Petya and Vasya are confident about the first problem, and all three friends are confident about the second problem. Therefore, they will solve these two problems. Only Petya is confident about the third problem, which is not enough, so they will skip it.
+
+In the second example, the friends will only solve the second problem, as Vasya and Tonya are confident about its solution.
+
+Help Petya, Vasya, and Tonya figure out how many problems they will tackle in the contest!

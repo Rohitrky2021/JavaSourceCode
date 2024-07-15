@@ -1,0 +1,31 @@
+problem solve using dp is two types - 
+
+1)Memorization + Recursion - Top -> Down  approach (Stack space is included) (Final ans to Base Case ) [Tc - 0(n) Sc - 0(n)]
+
+2)Tabulation + Space Optimization - Bottom -> up approach (Base case to final ans ) (no space included only work with variable) [Tc -0(n) Sc -0(1) ]
+
+***Some step to change a problem to Recursion problem**
+1) form of index 
+2) do all work for all index
+3) count all path ways (if minimum called then min path ) 
+
+***Some Step to change a Recursion problem to Tabulation**
+1)Base case 
+2) look see how many changing parametter and run nested loop of same number (chan parametter == nested loop)
+3)then copy and pase Recursion Relation 
+
+***Some step to Tabulation to Space Optimization***
+1) if have i-1 , i-2 then use space Optimization
+
+****DP apply in this problem***
+1) 1d dp 
+2) 2d dp (dp in matrix or grid)
+3) dp on subsequence or subset  (imp - pick , not pick)
+4) dp on string 
+
+
+***Why GREEDY fail **
+Greedy have no uniformality 
+
+****Count total ways ****
+1)when this kind of question then base is if reach target then return 1 else return 0 and add other recursive call and return it ;

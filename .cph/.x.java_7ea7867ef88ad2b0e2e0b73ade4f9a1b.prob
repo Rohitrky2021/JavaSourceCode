@@ -1,0 +1,1 @@
+{"name":"Local: x","url":"r:\\ALL CODES FILE\\JAVA SOURCE CODE\\x.java","tests":[{"id":1719154402015,"input":"8\n1 1 1\n1 5 9\n8 2 8\n10 9 3\n2 1 1\n2 4 1\n7 3 5\n1 9 4\n","output":"0\n8\n6\n7\n1\n3\n4\n8\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"r:\\ALL CODES FILE\\JAVA SOURCE CODE\\x.java","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: F","url":"r:\\ALL CODES FILE\\JAVA SOURCE CODE\\EXAMTIME\\CC\\20Sep\\F.java","tests":[{"id":1695222138012,"input":"4\n8 7 7\n8 1 7\n8 3 6\n1099511627776 1 100","output":"4\n28\n18\n270693356"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"r:\\ALL CODES FILE\\JAVA SOURCE CODE\\EXAMTIME\\CC\\20Sep\\F.java","group":"local","local":true}

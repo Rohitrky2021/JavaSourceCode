@@ -1,0 +1,46 @@
+##  Friendship factor
+
+Lina just received her first big salary and wants to celebrate by going to a restaurant. However, she doesn't want to go alone and decides to invite some of her friends. Each friend will agree to join Lina if she asks. Each friend has two characteristics: the amount of money they have and their friendship factor with Lina.
+
+Lina wants to make sure none of her friends feel poor compared to others in the group. A friend feels poor if there is someone in the group who has at least \(d\) units of money more than they do. Lina's goal is to maximize the total friendship factor of the friends she invites, without making any friend feel poor.
+
+### Input
+The first line of the input contains two space-separated integers \(n\) and \(d\) (1 ≤ \(n\) ≤ 10^5, 1 ≤ \(d\) ≤ 10^9) — the number of Lina's friends and the minimum difference in money to feel poor, respectively.  
+The next \(n\) lines contain the descriptions of Lina's friends. Each line contains two integers \(m_i\) and \(s_i\) (0 ≤ \(m_i, s_i\) ≤ 10^9) — the amount of money and the friendship factor of the \(i\)-th friend, respectively.
+
+### Output
+Print the maximum total friendship factor that Lina can achieve without making any friend feel poor.
+
+### Examples
+
+**Input:**
+4 5
+75 5
+0 100
+150 20
+75 1
+
+
+**Output:**
+100
+
+
+**Input:**
+5 100
+0 7
+11 32
+99 10
+46 8
+87 54
+
+
+**Output:**
+111
+
+
+### Explanation
+
+- In the first example, the best strategy is to invite only the second friend, resulting in a total friendship factor of 100. Any other combination would result in a lower total friendship factor.
+- In the second example, Lina can invite all the friends without any of them feeling poor, resulting in a total friendship factor of 111.
+
+Help Lina figure out the best combination of friends to invite to maximize the total friendship factor while ensuring no one feels poor!

@@ -1,0 +1,67 @@
+## magical world of algorithms
+
+In the magical world of algorithms, there's a wise turtle who loves solving puzzles involving arrays. 
+One day, the turtle comes across a unique challenge. Given an array \(a = [a_1, a_2, \ldots, a_n]\),
+ the turtle must determine whether it's possible to rearrange its elements 
+ into another array \(b = [b_1, b_2, \ldots, b_n]\) such that the modulo operation performed
+  sequentially on \(b\)'s elements never results in zero.
+
+Here’s what the turtle needs to achieve:
+
+Calculate the result of the operation \(b_1 \mod b_2 \mod \ldots \mod b_n \neq 0\).
+
+The modulo operations are performed from left to right. For example, for an array \(b\) and 
+operations \(2024 \mod 1000 \mod 8\), it would be calculated as \((2024 \mod 1000) \mod 8 = 24 \mod 8 = 0\).
+
+### Input
+The first line contains a single integer \(t\) (1 ≤ \(t\) ≤ 10^4) — the number of test cases.  
+The first line of each test case contains a single integer \(n\) (2 ≤ \(n\) ≤ 10^5).  
+The second line of each test case contains \(n\) integers \(a_1, a_2, \ldots, a_n\) (1 ≤ \(a_i\) ≤ 10^9).  
+The sum of \(n\) over all test cases does not exceed \(2 \times 10^5\).
+
+### Output
+For each test case, output "YES" if it is possible to rearrange the array \(a\) into an array \(b\) such that \(b_1 \mod b_2 \mod \ldots \mod b_n \neq 0\). Otherwise, output "NO".
+
+You can output the answer in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+
+### Examples
+
+**Input:**
+8
+6
+1 2 3 4 5 6
+5
+3 3 3 3 3
+3
+2 2 3
+5
+1 1 2 3 7
+3
+1 2 2
+3
+1 1 2
+6
+5 2 10 10 10 2
+4
+3 6 9 3
+
+
+**Output:**
+
+YES
+NO
+YES
+NO
+YES
+NO
+YES
+NO
+
+
+### Explanation
+
+- In the first test case, rearranging the array into \(b = [1, 2, 3, 4, 5, 6]\) (doing nothing) results in \(1 \mod 2 \mod 3 \mod 4 \mod 5 \mod 6 = 1\). Hence, it is possible to achieve the goal.
+- In the second test case, the array \(b\) must be equal to \([3, 3, 3, 3, 3]\), which results in \(3 \mod 3 \mod 3 \mod 3 \mod 3 = 0\). Hence, it is impossible to achieve the goal.
+- In the third test case, rearranging the array into \(b = [3, 2, 2]\) results in \(3 \mod 2 \mod 2 = 1\). Hence, it is possible to achieve the goal.
+
+Help the wise turtle determine the correct answer for each test case!

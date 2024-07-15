@@ -1,0 +1,70 @@
+## playing with an array
+
+Max is playing with an array of integers \(a=[a_1, a_2, ..., a_n]\). This array can contain both positive and negative numbers,
+ but it never contains zeroes. Max is frustrated because the sum of some consecutive subsegments of his array equals zero,
+  and he wants to fix that.
+
+Max needs to adjust the array so that no subsegment (a consecutive segment of elements) has a sum equal to zero.
+ To achieve this, Max can insert any number of integers between any pair of adjacent elements in the array.
+  These inserted integers can be any value (positive, negative, zero, or even very large).
+
+Max's goal is to find the minimum number of integers he needs to insert into the array to ensure that no subsegment has a sum of zero.
+
+### Input
+The first line of the input contains a single integer \(n\) (2 ≤ \(n\) ≤ 200000) — the number of elements in Max's array.  
+The second line contains \(n\) integers \(a_1, a_2, ..., a_n\) (−10^9 ≤ \(a_i\) ≤ 10^9, \(a_i \ne 0\)) — the elements of Max's array.
+
+### Output
+Print the minimum number of integers Max needs to insert into the array to make sure there are no subsegments with a sum equal to zero.
+
+### Examples
+
+**Input:**
+
+4
+1 -5 3 2
+
+ 
+ 
+**Output:**
+1
+
+  
+**Input:**
+5
+4 -2 3 -9 2
+
+ 
+ 
+**Output:**
+0
+
+  
+**Input:**
+9
+-1 1 -1 1 -1 1 1 -1 -1
+
+ 
+ 
+**Output:**
+6
+
+  
+**Input:**
+8
+16 -5 -11 -15 10 5 4 -4
+
+ 
+ 
+**Output:**
+3
+
+
+### Explanation
+
+- In the first example, there is only one subsegment with a sum of zero, which starts at the second element and ends at the fourth element. Inserting one element (e.g., 1) between the second and third elements would prevent any subsegment from summing to zero.
+- In the second example, there are no subsegments that sum to zero, so no insertions are needed.
+- In the third example, various subsegments sum to zero, and Max needs to insert six elements to break these zero-sum subsegments.
+- In the fourth example, inserting three elements at appropriate positions will ensure no subsegment sums to zero.
+
+Help Max determine the minimum number of integers to insert to make sure there are no zero-sum subsegments in the array!

@@ -1,0 +1,156 @@
+
+
+// **********Converting to an Array:
+
+
+public static int[] convertToArray(LinkedList<Integer> linkedList) {
+    int size = linkedList.size();
+    int[] array = new int[size];
+    int index = 0;
+    for (Integer value : linkedList) {
+        array[index++] = value;
+    }
+    return array;
+}
+
+
+// *****************Converting to a Hashtable:
+
+public static Hashtable<String, Integer> convertToHashtable(LinkedList<Node> linkedList) {
+    Hashtable<String, Integer> hashtable = new Hashtable<>();
+    for (Node node : linkedList) {
+        String key = node.getKey();
+        Integer value = node.getValue();
+        hashtable.put(key, value);
+    }
+    return hashtable;
+}
+
+
+// ******************Converting to a String:
+
+public static String convertToString(LinkedList<String> linkedList) {
+    StringBuilder sb = new StringBuilder();
+    for (String data : linkedList) {
+        sb.append(data).append(" "); // Add a space as a separator
+    }
+    return sb.toString().trim(); // Remove trailing space
+}
+
+//*************Array---->
+
+//*********Converting a String to an Array:
+
+public static String[] convertStringToArray(String str) {
+    String[] array = str.split(" "); // Split the string using space as a delimiter
+    return array;
+}
+
+public static char[] convertStringToArray(String str) {
+    char[] array = str.toCharArray();
+    return array;
+}
+
+//******** Array to a String:
+
+public static String convertArrayToString(String[] array) {
+    StringBuilder sb = new StringBuilder();
+    for (String element : array) {
+        sb.append(element).append(" "); // Add a space as a separator
+    }
+    return sb.toString().trim(); // Remove trailing space
+}
+*****
+public static String convertArrayToString(char[] array) {
+    String str = new String(array);
+    return str;
+}
+//****** ArrayList ---------->
+
+//******** String to an ArrayList:
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public static ArrayList<String> convertStringToArrayList(String str) {
+    String[] array = str.split(" "); // Split the string using space as a delimiter
+    ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
+    return arrayList;
+}
+
+public static ArrayList<String> convertStringToArrayList(String str) {
+    return new ArrayList<>(Arrays.asList(str.split(" ")));
+}
+
+//******* ArrayList to a String:
+
+import java.util.ArrayList;
+
+public static String convertArrayListToString(ArrayList<String> arrayList) {
+    StringBuilder sb = new StringBuilder();
+    for (String element : arrayList) {
+        sb.append(element).append(" "); // Add a space as a separator
+    }
+    return sb.toString().trim(); // Remove trailing space
+}
+
+//**********Hashtable
+
+//******** ArrayList to a Hashtable in Java, you can use the following code snippet:
+
+
+public static Hashtable<String, Integer> convertArrayListToHashtable(ArrayList<String> arrayList) {
+    Hashtable<String, Integer> hashtable = new Hashtable<>();
+    for (int i = 0; i < arrayList.size(); i++) {
+        String key = arrayList.get(i);
+        hashtable.put(key, i);
+    }
+    return hashtable;
+}
+
+//******String to Hashtable
+
+import java.util.Hashtable;
+
+public static Hashtable<String, String> convertStringToHashtable(String str) {
+    Hashtable<String, String> hashtable = new Hashtable<>();
+    String[] keyValuePairs = str.split(","); // Split string by comma
+
+    for (String pair : keyValuePairs) {
+        String[] parts = pair.split(":"); // Split each pair by colon
+        if (parts.length == 2) {
+            String key = parts[0];
+            String value = parts[1];
+            hashtable.put(key, value);
+        }
+    }
+
+    return hashtable;
+}
+
+convert a String of number from any base (such as binary, hexadecimal, or any other base) to decimal in a general way, you can use the following code snippet in Java:
+
+
+public static int convertToDecimal(String number, int base) {
+    int decimal = 0;
+    int power = 0;
+    for (int i = number.length() - 1; i >= 0; i--) {
+        char digit = number.charAt(i);
+        int value = Character.digit(digit, base);
+        decimal += value * Math.pow(base, power);
+        power++;
+    }
+    return decimal;
+}
+
+To convert a decimal number to any base (such as binary, hexadecimal, or any other base) in a general way, you can use the following code snippet in Java:
+
+public static String convertFromDecimal(int decimal, int base) {
+    StringBuilder result = new StringBuilder();
+    while (decimal > 0) {
+        int remainder = decimal % base;
+        result.insert(0, Integer.toString(remainder));
+        decimal = decimal / base;
+    }
+    return result.toString();
+}

@@ -1,0 +1,11 @@
+{
+  "java.project.sourcePaths": [
+    "backtrackin",
+    "POD",
+    "Mathee",
+    "Arra",
+    "=======DSA====================/16_Binary_tree/2_Binary_Tree"
+  ],
+  "java.debug.settings.onBuildFailureProceed": true,
+  "java.format.settings.url": "eclipse-formatter.xml"
+}

@@ -1,0 +1,36 @@
+## soldier is craving bananas
+
+A soldier is craving bananas and wants to buy \( w \) bananas from a shop. 
+The price of bananas increases in a specific pattern: the first banana costs \( k \) dollars, 
+the second banana costs \( 2k \) dollars, the third banana costs \( 3k \) dollars, and so on.
+ In general, the \( i \)-th banana costs \( i \cdot k \) dollars.
+
+The soldier has \( n \) dollars initially
+. Your task is to help the soldier determine how many dollars he needs to borrow from his friend to buy all \( w \) bananas.
+
+### Constraints
+\( 1 \le k, w \le 1000 \)
+\( 0 \le n \le 10^9 \)
+
+### Input
+The first line contains three positive integers \( k \), \( n \), and \( w \):
+
+- \( k \): the cost of the first banana.
+- \( n \): the initial number of dollars the soldier has.
+- \( w \): the number of bananas he wants to buy.
+
+### Output
+Output one integer — the amount of dollars that the soldier must borrow from his friend. If he doesn't have to borrow money, output 0.
+
+### Examples
+
+**Input:**
+```
+3 17 4
+```
+**Output:**
+```
+13
+```
+
+Help the soldier figure out how much money he needs to borrow to satisfy his banana craving!

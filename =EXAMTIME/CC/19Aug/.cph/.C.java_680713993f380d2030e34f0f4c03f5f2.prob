@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"r:\\ALL CODES FILE\\JAVA SOURCE CODE\\=EXAMTIME\\CC\\19Aug\\C.java","tests":[{"id":1711551385320,"input":"3\n5 2\n3 10\n5 30","output":"2 4 7 10 12\n1 8 25\n10 20 55 91 130"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"r:\\ALL CODES FILE\\JAVA SOURCE CODE\\=EXAMTIME\\CC\\19Aug\\C.java","group":"local","local":true}

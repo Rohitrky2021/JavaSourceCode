@@ -1,0 +1,39 @@
+## Book Reader
+
+Alice, an avid reader, has collected \( n \) books, each containing a certain number of pages. The books are numbered from 1 to \( n \), where the 1st book contains \( a_1 \) pages, the 2nd book contains \( a_2 \) pages, and so on up to the \( n \)-th book which contains \( a_n \) pages.
+
+Alice has a unique way of enjoying her books: she divides all her books into two non-empty piles. From each pile, she reads the book with the highest number of pages. Alice wants to maximize the total number of pages she can read using this method.
+
+### Input
+The input consists of multiple test cases:
+- The first line contains a single integer \( t \) (\( 1 \leq t \leq 500 \)) — the number of test cases.
+- Each test case begins with an integer \( n \) (\( 2 \leq n \leq 100 \)) — the number of books Alice has.
+- The next line contains \( n \) integers \( a_1, a_2, ..., a_n \) (\( 1 \leq a_i \leq 10^9 \)) — the number of pages in each book.
+
+### Output
+For each test case, output a single integer — the maximum number of pages Alice can read by dividing the books into two piles and then selecting the book with the highest number of pages from each pile.
+
+### Examples
+
+**Input:**
+5
+2
+1 1
+4
+2 3 3 1
+5
+2 2 3 2 2
+2
+10 3
+3
+1 2 3
+
+**Output:**
+2
+4
+5
+13
+5
+
+
+Help Alice determine the maximum enjoyment she can get from her books!

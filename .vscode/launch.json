@@ -1,0 +1,189 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MatrixSortingWithInput",
+      "request": "launch",
+      "mainClass": "MatrixSortingWithInput",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "so",
+      "request": "launch",
+      "mainClass": "so",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "setb",
+      "request": "launch",
+      "mainClass": "setb",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "targetSumoffulllength",
+      "request": "launch",
+      "mainClass": "targetSumoffulllength",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "UserMainCode",
+      "request": "launch",
+      "mainClass": "tes.UserMainCode",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "tes",
+      "request": "launch",
+      "mainClass": "tes",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "sortin01",
+      "request": "launch",
+      "mainClass": "sortin01",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "TowerofHanoi",
+      "request": "launch",
+      "mainClass": "TowerofHanoi",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "permutation",
+      "request": "launch",
+      "mainClass": "permutation",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "Knapsack01usingrecursion",
+      "request": "launch",
+      "mainClass": "Knapsack01usingrecursion",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Allfactors",
+      "request": "launch",
+      "mainClass": "Allfactors",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "SieveOfEratosthenes",
+      "request": "launch",
+      "mainClass": "SieveOfEratosthenes",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "SieveTubeMethod",
+      "request": "launch",
+      "mainClass": "SieveTubeMethod",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "factorial",
+      "request": "launch",
+      "mainClass": "factorial",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "factorialoflong",
+      "request": "launch",
+      "mainClass": "factorialoflong",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "fastExponenetial",
+      "request": "launch",
+      "mainClass": "fastExponenetial",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "fibonacci",
+      "request": "launch",
+      "mainClass": "fibonacci",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "friendspairing",
+      "request": "launch",
+      "mainClass": "friendspairing",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "numdec",
+      "request": "launch",
+      "mainClass": "numdec",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "power",
+      "request": "launch",
+      "mainClass": "power",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "removedupli",
+      "request": "launch",
+      "mainClass": "removedupli",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "test",
+      "request": "launch",
+      "mainClass": "test",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "tiling",
+      "request": "launch",
+      "mainClass": "tiling",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    },
+    {
+      "type": "java",
+      "name": "trailingzero",
+      "request": "launch",
+      "mainClass": "trailingzero",
+      "projectName": "JAVA SOURCE CODE_aeea6f67"
+    }
+  ]
+}

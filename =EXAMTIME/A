@@ -1,0 +1,70 @@
+import java.util.Scanner;
+import java.util.*;
+
+public class Main {
+
+    public static int minOperations(int[] arr) {
+        if(!isSorted(arr)){
+            return 0;
+        }
+        int ans[]=findMinDifferencePair(arr);
+
+        int n = arr.length;
+        int[] increasing = new int[n];
+        int[] decreasing = new int[n];
+        int diff=Math.abs(ans[0]-ans[1]);
+
+        return (int) Math.ceil(diff/2)+1;
+
+
+
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt(); // Number of test cases
+
+        for (int i = 0; i < t; i++) {
+            int n = scanner.nextInt(); // Length of the array
+            int[] arr = new int[n];
+
+            for (int j = 0; j < n; j++) {
+                arr[j] = scanner.nextInt(); // Array elements
+            }
+
+            int result = minOperations(arr);
+            System.out.println(result);
+        }
+    }
+    
+    public static boolean isSorted(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int[] findMinDifferencePair(int[] arr) {
+        // Sort the array in non-decreasing order
+        Arrays.sort(arr);
+
+        int minDiff = Integer.MAX_VALUE;
+        int[] minDiffPair = new int[2];
+
+        // Compare adjacent elements to find the pair with the minimum difference
+        for (int i = 1; i < arr.length; i++) {
+            int diff = arr[i] - arr[i - 1];
+            if (diff < minDiff) {
+                minDiff = diff;
+                minDiffPair[0] = arr[i - 1];
+                minDiffPair[1] = arr[i];
+            }
+        }
+
+        return minDiffPair;
+    }
+
+}

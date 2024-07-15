@@ -1,0 +1,385 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch exercise1",
+            "request": "launch",
+            "mainClass": "exercise1",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch fastexponentiation",
+            "request": "launch",
+            "mainClass": "fastexponentiation",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch countsetbits",
+            "request": "launch",
+            "mainClass": "countsetbits",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch hollowrectangle",
+            "request": "launch",
+            "mainClass": "hollowrectangle",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch starpattern",
+            "request": "launch",
+            "mainClass": "starpattern",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch invertedstarpattern",
+            "request": "launch",
+            "mainClass": "invertedstarpattern",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch halfpyramidpattern",
+            "request": "launch",
+            "mainClass": "halfpyramidpattern",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch characterpattern",
+            "request": "launch",
+            "mainClass": "characterpattern",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch if_else_prog2",
+            "request": "launch",
+            "mainClass": "if_else_prog2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch if_else_prog1",
+            "request": "launch",
+            "mainClass": "if_else_prog1",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercise_prog2",
+            "request": "launch",
+            "mainClass": "exercise_prog2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch exercise_prog1",
+            "request": "launch",
+            "mainClass": "exercise_prog1",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment_modulus_equal_to",
+            "request": "launch",
+            "mainClass": "assignment_modulus_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment_divide_equal_to",
+            "request": "launch",
+            "mainClass": "assignment_divide_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment_multiply_equal_to",
+            "request": "launch",
+            "mainClass": "assignment_multiply_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment_minus_equal_to",
+            "request": "launch",
+            "mainClass": "assignment_minus_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment_plus_equal_to",
+            "request": "launch",
+            "mainClass": "assignment_plus_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch assignment_equal_to",
+            "request": "launch",
+            "mainClass": "assignment_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch logical_logical_not",
+            "request": "launch",
+            "mainClass": "logical_logical_not",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch logical_logical_or",
+            "request": "launch",
+            "mainClass": "logical_logical_or",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch logical_logical_and",
+            "request": "launch",
+            "mainClass": "logical_logical_and",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch relational_greater_than_equal_to",
+            "request": "launch",
+            "mainClass": "relational_greater_than_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch relational_less_than_equal_to",
+            "request": "launch",
+            "mainClass": "relational_less_than_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch relational_less_than",
+            "request": "launch",
+            "mainClass": "relational_less_than",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch relational_greater_than",
+            "request": "launch",
+            "mainClass": "relational_greater_than",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch relational_not_equal_to",
+            "request": "launch",
+            "mainClass": "relational_not_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch relational_doube_equal_to",
+            "request": "launch",
+            "mainClass": "relational_doube_equal_to",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch arithematic_unaryoperators3",
+            "request": "launch",
+            "mainClass": "arithematic_unaryoperators3",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch arithematic_unaryoperators2",
+            "request": "launch",
+            "mainClass": "arithematic_unaryoperators2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch arithematic_unaryoperators1",
+            "request": "launch",
+            "mainClass": "arithematic_unaryoperators1",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch arithematic_unaryoperators",
+            "request": "launch",
+            "mainClass": "arithematic_unaryoperators",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch arithematic_binaryoperators",
+            "request": "launch",
+            "mainClass": "arithematic_binaryoperators",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch exerciseprog3",
+            "request": "launch",
+            "mainClass": "exerciseprog3",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch areaofcircle",
+            "request": "launch",
+            "mainClass": "areaofcircle",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch exerciseprog1",
+            "request": "launch",
+            "mainClass": "exerciseprog1",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch exerciseprog2",
+            "request": "launch",
+            "mainClass": "exerciseprog2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch intvariable",
+            "request": "launch",
+            "mainClass": "intvariable",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch intvariable2",
+            "request": "launch",
+            "mainClass": "intvariable2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch javabasics",
+            "request": "launch",
+            "mainClass": "javabasics",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch pattern",
+            "request": "launch",
+            "mainClass": "pattern",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch productusingscanner",
+            "request": "launch",
+            "mainClass": "productusingscanner",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch scandatatype",
+            "request": "launch",
+            "mainClass": "scandatatype",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch scanprog",
+            "request": "launch",
+            "mainClass": "scanprog",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch stringvariable",
+            "request": "launch",
+            "mainClass": "stringvariable",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch sum",
+            "request": "launch",
+            "mainClass": "sum",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch sumusingscanner",
+            "request": "launch",
+            "mainClass": "sumusingscanner",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typcasting",
+            "request": "launch",
+            "mainClass": "typcasting",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typecasting2",
+            "request": "launch",
+            "mainClass": "typecasting2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typecasting3",
+            "request": "launch",
+            "mainClass": "typecasting3",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typeconversion",
+            "request": "launch",
+            "mainClass": "typeconversion",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typepromotion",
+            "request": "launch",
+            "mainClass": "typepromotion",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typepromotion2",
+            "request": "launch",
+            "mainClass": "typepromotion2",
+            "projectName": "alpha_java_programs_83df36ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch typepromotion3",
+            "request": "launch",
+            "mainClass": "typepromotion3",
+            "projectName": "alpha_java_programs_83df36ea"
+        }
+    ]
+}

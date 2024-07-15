@@ -1,0 +1,2 @@
+
+                indegree[e.dest]--;

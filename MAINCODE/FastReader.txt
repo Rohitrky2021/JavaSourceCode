@@ -1,0 +1,28 @@
+to check ISsorted or not
+Frequency get frequency of the integer
+FastReader---------->   long nextLong(): Reads the next token from the input stream and parses it as a long integer.
+                        double nextDouble(): Reads the next token from the input stream and parses it as a double.
+                        String nextLine(): Reads the next line from the input stream and returns it as a string.
+                        int[] nextIntArray(int n): Reads the next n tokens from the input stream and stores them as an array of integers.
+                        Integer[] nextIntegerArray(int n): Reads the next n tokens from the input stream and stores them as an array of Integers (wrapper class for int).
+                        long[] nextLongArray(int n): Reads the next n tokens from the input stream and stores them as an array of long integers.
+                        String[] nextStringArray(): Reads the next line from the input stream and splits it into an array of strings using space as the delimiter.
+                        String[] nextStringArray(int n): Reads the next n tokens from the input stream and stores them as an array of strings.
+
+Print ---->print all int char str in single string {------>Number: 42, Name: John Doe, Flag: true
+
+
+number of substrings having equal number of 0 and 1
+Manual sort
+Different number after sorting orginal array
+//BINARY EXPONENTIATION
+// --- Fast exponentiation ---//
+// --- permutations and Combinations ---//
+//  isPrime  //
+//  LCM  //
+//  Greatest Common Divisor  //
+//  FACToORIAL  //-->using recurrsiive way
+//  REVERSE DIGIT OF NUMBER  //
+//  SEGMENTTREE FOR PREFIXSUM AND UPDATE + QUERIES  //------> Range sum and QUERIES for UPdate
+//stuff for prime end --> listofPrime
+//max integer
