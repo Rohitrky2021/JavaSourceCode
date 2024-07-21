@@ -1,71 +1,58 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
-class NumArray {
-    int[] nums;
-    long[] prefixSum;
-
-    public NumArray(int[] nums) {
-        this.nums = nums;
-        this.prefixSum = new long[nums.length + 1];
-        buildPrefixSum();
-    }
-
-    private void buildPrefixSum() {
-        for (int i = 0; i < nums.length; i++) {
-            prefixSum[i + 1] = prefixSum[i] + nums[i];
+class C {
+    public int minChanges(int[] nums, int k) {
+        int n = nums.length;
+        int changes = 0;
+        
+        // We need to find the most frequent difference to minimize changes
+        Map<Integer, Integer> diffCount = new HashMap<>();
+        
+        // Count the frequency of each difference
+        for (int i = 0; i < n / 2; i++) {
+            int diff = Math.abs(nums[i] - nums[n - i - 1]);
+            diffCount.put(diff, diffCount.getOrDefault(diff, 0) + 1);
         }
-    }
-
-    public void update(int index, int val) {
-        int diff = val - nums[index];
-        nums[index] = val;
-        for (int i = index + 1; i < prefixSum.length; i++) {
-            prefixSum[i] += diff;
-        }
-    }
-
-    public long subArraySum(int left, int right) {
-        long sum = 0;
-        for (int i = left; i <= right; i++) {
-            sum += (prefixSum[right + 1] - prefixSum[i]) * (i - left + 1);
-        }
-        return sum;
-    }
-}
-
-public class C {
-
-    public static List<Long> solve(int N, int Q, int[] A, int[][] queries) {
-        NumArray numArray = new NumArray(A);
-        List<Long> result = new ArrayList<>();
-
-        for (int[] query : queries) {
-            int type = query[0];
-            if (type == 1) {
-                int index = query[1] - 1;
-                int val = query[2];
-                numArray.update(index, val);
-            } else if (type == 2) {
-                int L = query[1] - 1;
-                int R = query[2] - 1;
-                long sum = numArray.subArraySum(L, R);
-                result.add(sum);
+        
+        // Find the most frequent difference
+        int maxFrequency = 0;
+        int maxDiff = 0;
+        for (Map.Entry<Integer, Integer> entry : diffCount.entrySet()) {
+            if (entry.getValue() > maxFrequency) {
+                maxFrequency = entry.getValue();
+                maxDiff = entry.getKey();
             }
         }
-
-        return result;
+        
+        // Calculate the number of changes required
+        for (int i = 0; i < n / 2; i++) {
+            int diff = Math.abs(nums[i] - nums[n - i - 1]);
+            if (diff == maxDiff) {
+                continue;
+            }
+            // If we can change one of the pair to make the difference maxDiff
+            if (Math.abs(nums[i] + maxDiff - nums[n - i - 1]) <= k || Math.abs(nums[n - i - 1] + maxDiff - nums[i]) <= k) {
+                changes++;
+            } else {
+                changes += 2;
+            }
+        }
+        
+        return changes;
     }
 
     public static void main(String[] args) {
-        int N = 5;
-        int Q = 2;
-        int[] A = {2, 1, 4, 3, 1};
-        int[][] queries = {{1, 2, 2}, {2, 1, 3}};
-
-        List<Long> result = solve(N, Q, A, queries);
-        for (long res : result) {
-            System.out.println(res);
-        }
+        C solution = new C();
+        
+        // Example 1
+        int[] nums1 = {1, 0, 1, 2, 4, 3};
+        int k1 = 4;
+        System.out.println("Example 1 Output: " + solution.minChanges(nums1, k1)); // Expected output: 2
+        
+        // Example 2
+        int[] nums2 = {0, 1, 2, 3, 3, 6, 5, 4};
+        int k2 = 6;
+        System.out.println("Example 2 Output: " + solution.minChanges(nums2, k2)); // Expected output: 2
     }
 }

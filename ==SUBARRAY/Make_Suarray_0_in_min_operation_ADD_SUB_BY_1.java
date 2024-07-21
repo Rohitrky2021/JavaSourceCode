@@ -1,4 +1,7 @@
 import java.util.*;
+public class Make_Suarray_0_in_min_operation_ADD_SUB_BY_1 {
+    
+}
 
 class D {
     public long minimumOperations(int[] nums, int[] tar) {
@@ -32,11 +35,11 @@ class D {
                 pos = 1;
                 continue;
             }
-            // Handle no sign change  --> //My previous was  Same as my Sign 
-            if (m >= Math.abs(t[i])) { // wo prev bdaa tha merese 
+            // Handle no sign change
+            if (m >= Math.abs(t[i])) {
                 m = Math.abs(t[i]);
                 continue;
-            } else {                      // wo prev chotaa  tha merese 
+            } else {
                 ans += Math.abs(t[i]) - m;
                 m = Math.abs(t[i]);
             }
